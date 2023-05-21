@@ -15,7 +15,13 @@ export default function Navbar() {
             />
           </Link>
           <div className="flex-none lg:hidden">
-            <label htmlFor="my-drawer-4" className="btn btn-square btn-ghost">
+            <button
+              type="button"
+              className="btn btn-square btn-ghost"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -29,7 +35,7 @@ export default function Navbar() {
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>
-            </label>
+            </button>
           </div>
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -72,10 +78,26 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div className="drawer drawer-end absolute z-40">
-        <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-side">
-          <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
+      <div
+        className="offcanvas offcanvas-end"
+        tabIndex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div className="offcanvas-header">
+          <button type="button" data-bs-dismiss="offcanvas">
+            <svg
+              className="swap-on fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 512 512"
+            >
+              <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+            </svg>
+          </button>
+        </div>
+        <div className="offcanvas-body">
           <ul className="p-4 w-60 bg-base-100 navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" href="/">
