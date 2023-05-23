@@ -1,11 +1,11 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/globals.css";
 import Head from "next/head";
 import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
   useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
+    // import("bootstrap/dist/js/bootstrap");
   }, []);
 
   return (

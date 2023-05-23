@@ -4,8 +4,8 @@ export default function Footer() {
   return (
     <footer className="footer p-10 bg-neutral text-neutral-content">
       <div className="container">
-        <div className="row">
-          <div className="col-12 col-sm-4 mb-3">
+        <div className="grid grid-cols-12 gap-3">
+          <div className="col-span-12 md:col-span-4 mb-3">
             <h3 className="footer-title">আমাদের সম্পর্কে</h3>
             <p>
               জমজম গ্রাফিক্স ব্রাহ্মণবাড়িয়া শহরে একটি মানসম্মত ডিজাইন এবং
@@ -16,9 +16,9 @@ export default function Footer() {
               ডেভেলপমেন্ট এর ক্ষেত্রে সর্বোচ্চ মানের সেবা প্রদান করে থাকে।
             </p>
           </div>
-          <div className="col-12 col-sm-8">
-            <div className="row">
-              <div className="col-sm-6 col-md-4 mb-3">
+          <div className="col-span-12 md:col-span-8">
+            <div className="grid grid-cols-12 gap-3">
+              <div className="col-span-12 sm:col-span-6 md:col-span-4 mb-3">
                 <h3 className="footer-title">কুইক লিংক</h3>
                 <ul>
                   <li>
@@ -44,7 +44,7 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className="col-sm-6 col-md-4 mb-3">
+              <div className="col-span-12 sm:col-span-6 md:col-span-4 mb-3">
                 <h3 className="footer-title">সেবা সমূহ</h3>
                 <ul>
                   <li>
@@ -65,7 +65,7 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
-              <div className="col-sm-6 col-md-4 mb-3">
+              <div className="col-span-12 sm:col-span-6 md:col-span-4 mb-3">
                 <h3 className="footer-title">যোগাযোগ</h3>
                 <ul>
                   <li>

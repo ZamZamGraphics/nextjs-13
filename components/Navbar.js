@@ -4,16 +4,18 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-base-100 shadow-sm sticky-top">
+      <nav className="navbar bg-base-100 shadow md:shadow-md sticky top-0 z-40">
         <div className="container">
-          <Link href="/" className="navbar-brand">
-            <Image
-              src="https://zamzamgraphics.github.io/ZamZamGraphics/images/header_logo.svg"
-              alt="ZamZam Graphics"
-              width={200}
-              height={55}
-            />
-          </Link>
+          <div className="flex-1">
+            <Link href="/" className="navbar-brand">
+              <Image
+                src="https://zamzamgraphics.github.io/ZamZamGraphics/images/header_logo.svg"
+                alt="ZamZam Graphics"
+                width={200}
+                height={55}
+              />
+            </Link>
+          </div>
           <div className="flex-none lg:hidden">
             <button
               type="button"
@@ -37,8 +39,8 @@ export default function Navbar() {
               </svg>
             </button>
           </div>
-          <div className="collapse navbar-collapse">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+          <div className="flex-none hidden lg:block">
+            <ul className="menu menu-horizontal mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" href="/">
                   হোম
@@ -78,7 +80,7 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-      <div
+      {/* <div
         className="offcanvas offcanvas-end"
         tabIndex="-1"
         id="offcanvasRight"
@@ -136,7 +138,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

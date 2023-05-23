@@ -9,7 +9,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
       </Head>
-      <body>
+      <body className="antialiased text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800">
         <Main />
         <NextScript />
       </body>

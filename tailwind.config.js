@@ -36,12 +36,12 @@ module.exports = {
 
           neutral: "#1e293b",
           "neutral-focus": "#020617",
-          "neutral-content": "#ffffff",
+          "neutral-content": "#cbd5e1",
 
           "base-100": "#ffffff",
           "base-200": "#f9fafb",
           "base-300": "#ced3d9",
-          "base-content": "#1e2734",
+          "base-content": "#475569",
 
           info: "#00B8D9",
           success: "#00ab55",
@@ -74,7 +74,7 @@ module.exports = {
 
           neutral: "#0f172a",
           "neutral-focus": "#020617",
-          "neutral-content": "#ffffff",
+          "neutral-content": "#cbd5e1",
 
           "base-100": "#0f172a",
           "base-200": "#1e293b",
