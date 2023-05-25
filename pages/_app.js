@@ -1,6 +1,7 @@
 // import "bootstrap/dist/css/bootstrap.min.css";
 import "@/styles/globals.css";
 import Head from "next/head";
+import Layout from "@/components/Layout";
 import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
@@ -14,7 +15,9 @@ export default function App({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/x-icon" href="/favicon.png" sizes="any" />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
 }

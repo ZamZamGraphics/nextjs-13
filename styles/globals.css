@@ -2,7 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "SolaimanLipi";
+  font-display: swap;
+  font-style: normal;
+  src: url("./fonts/SolaimanLipi.eot"); /* IE9*/
+  src: url("./fonts/SolaimanLipi.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/SolaimanLipi.woff") format("woff"),
+    url("./fonts/SolaimanLipi.ttf") format("truetype"),
+    url("./fonts/SolaimanLipi.svg#SolaimanLipi") format("svg");
+}
+@font-face {
+  font-family: "Hind Siliguri";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/HindSiliguri-Bold.woff") format("woff"),
+    url("./fonts/HindSiliguri-Bold.woff2") format("woff2"),
+    url("./fonts/HindSiliguri-Bold.ttf") format("truefype");
+}
+
+@font-face {
+  font-family: "Hind Siliguri";
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/HindSiliguri-SemiBold.woff") format("woff"),
+    url("./fonts/HindSiliguri-SemiBold.woff2") format("woff2"),
+    url("./fonts/HindSiliguri-SemiBold.ttf") format("truefype");
+}
+
 :root {
+  --solaimani-lipi: "SolaimanLipi", "Roboto";
+  --hind-siliguri: "Hind Siliguri", "sans-serif";
+  --roboto: "Roboto", "SolaimanLipi";
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -14,4 +47,65 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+body {
+  font-family: var(--roboto);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+/* offcanvas */
+.offcanvas {
+  @apply fixed bottom-0 flex flex-col max-w-full bg-base-100 bg-clip-padding outline-0 invisible transition-all ease-in-out duration-300;
+  z-index: 1045;
+}
+.offcanvas.offcanvas-start {
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.175);
+  transform: translateX(-100%);
+}
+.offcanvas.offcanvas-end {
+  top: 0;
+  right: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.175);
+  transform: translateX(100%);
+}
+.offcanvas.hiding,
+.offcanvas.show,
+.offcanvas.showing {
+  @apply visible;
+}
+.offcanvas.show:not(.hiding),
+.offcanvas.showing {
+  @apply transform-none;
+}
+.offcanvas-header {
+  @apply flex items-center justify-between p-4;
+}
+.offcanvas-body {
+  @apply flex-grow p-4 overflow-y-auto;
+}
+
+.offcanvas-backdrop {
+  @apply fixed top-0 left-0 z-50 w-screen h-screen bg-black;
+}
+
+.offcanvas-backdrop.show {
+  opacity: 0.5;
+}
+
+/* footer */
+.footer {
+  font-size: 16px;
+  line-height: 25px;
+}
+.footer-title {
+  font-family: var(--hind-siliguri);
+  font-weight: 600;
+  font-size: 25px;
+  color: white;
+  opacity: 1;
 }
