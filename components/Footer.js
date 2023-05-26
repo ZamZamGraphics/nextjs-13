@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-      <div className="text-center p-2 bg-slate-900 text-slate-500">
+      <div className="text-center text-sm p-3 bg-slate-900 text-slate-500">
         কপিরাইট © ২০২২. <Link href="/">জমজম গ্রাফিক্স</Link> | সর্বসত্ত্ব সংরক্ষিত
       </div>
     </>

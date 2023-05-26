@@ -8,7 +8,7 @@ export default function index() {
       <Head>
         <title>পোর্টফোলিও | জমজম গ্রাফিক্স</title>
       </Head>
-      <PageTitle title="Portfolio Page" />
+      <PageTitle title="পোর্টফোলিও" />
       <Services />
     </>
   );

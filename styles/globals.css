@@ -51,9 +51,13 @@
 
 body {
   font-family: var(--roboto);
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
+  @apply text-lg font-normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--hind-siliguri);
 }
 
 /* offcanvas */
