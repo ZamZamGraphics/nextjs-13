@@ -1,16 +1,19 @@
-import React from "react";
-import Service from "./service";
+import Service from "./Service";
 
-export default function index() {
+export default function index({ services }) {
   return (
     <section className="p-10">
       <div className="container">
-        {/* col-sm-12 col-md-6 col-lg-3 d-flex */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
-          <Service />
-          <Service />
-          <Service />
-          <Service />
+          {services.map((service) => (
+            <Service
+              key={Math.random()}
+              title={service.title}
+              slug={service.slug}
+              icon={service.icon}
+              description={service.description}
+            />
+          ))}
         </div>
       </div>
     </section>

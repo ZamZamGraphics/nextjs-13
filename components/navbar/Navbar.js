@@ -3,6 +3,7 @@ import Link from "next/link";
 import NavItems from "./NavItems";
 import Drawer from "./Drawer";
 import { useState } from "react";
+import logo from "../../public/logo_light.svg";
 
 export default function Navbar() {
   const [show, setShow] = useState(false);
@@ -21,12 +22,7 @@ export default function Navbar() {
         <div className="container">
           <div className="flex-1">
             <Link href="/" className="navbar-brand">
-              <Image
-                src="https://zamzamgraphics.github.io/ZamZamGraphics/images/header_logo.svg"
-                alt="ZamZam Graphics"
-                width={200}
-                height={55}
-              />
+              <Image src={logo} alt="ZamZam Graphics" width={200} height={55} />
             </Link>
           </div>
           <div className="flex-none lg:hidden">

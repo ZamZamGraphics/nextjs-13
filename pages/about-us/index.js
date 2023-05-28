@@ -3,7 +3,7 @@ import Head from "next/head";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/services";
 
-export default function index() {
+export default function index({ services }) {
   return (
     <>
       <Head>
@@ -14,7 +14,13 @@ export default function index() {
       <h2 className="text-4xl mt-10 text-center font-bold uppercase text-slate-700 dark:text-slate-300">
         আমাদের সেবাসমূহ
       </h2>
-      <Services />
+      <Services services={services} />
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const res = await fetch("http://localhost:3000/api/services");
+  const services = await res.json();
+  return { props: { services } };
 }
