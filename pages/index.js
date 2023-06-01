@@ -1,15 +1,16 @@
-import Hero from "@/components/Hero";
 import Head from "next/head";
+import axios from "../lib/axios";
+import Header from "@/components/Header";
 import Services from "@/components/services";
 import AboutUs from "@/components/AboutUs";
 
-export default function index({ services }) {
+export default function index({ headers, services }) {
   return (
     <>
       <Head>
         <title>জমজম গ্রাফিক্স</title>
       </Head>
-      <Hero />
+      <Header headers={headers} />
       <h2 className="text-4xl mt-10 text-center font-bold uppercase text-slate-700 dark:text-slate-300">
         আমাদের সেবাসমূহ
       </h2>
@@ -23,7 +24,10 @@ export default function index({ services }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch("http://localhost:3000/api/services");
-  const services = await res.json();
-  return { props: { services } };
+  const headerResponse = await axios("header");
+  const serviceResponse = await axios("services");
+
+  const headers = await headerResponse.data;
+  const services = await serviceResponse.data;
+  return { props: { headers, services } };
 }

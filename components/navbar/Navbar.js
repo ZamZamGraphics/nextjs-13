@@ -22,7 +22,13 @@ export default function Navbar() {
         <div className="container">
           <div className="flex-1">
             <Link href="/" className="navbar-brand">
-              <Image src={logo} alt="ZamZam Graphics" width={200} height={55} />
+              <Image
+                src={logo}
+                alt="ZamZam Graphics"
+                width={0}
+                height={0}
+                style={{ height: "auto" }}
+              />
             </Link>
           </div>
           <div className="flex-none lg:hidden">

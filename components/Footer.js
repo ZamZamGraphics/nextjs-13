@@ -70,7 +70,7 @@ export default function Footer() {
                 </div>
                 <div className="col-span-12 sm:col-span-6 md:col-span-4 mb-3">
                   <h3 className="footer-title">যোগাযোগ</h3>
-                  <ul>
+                  <ul className="break-words">
                     <li>
                       মসজিদ মার্কেট (২য় তলা), মসজিদ রোড, ব্রাহ্মণবাড়িয়া -3400,
                       বাংলাদেশ।
@@ -93,7 +93,8 @@ export default function Footer() {
         </div>
       </footer>
       <div className="text-center text-sm p-3 bg-slate-900 text-slate-500">
-        কপিরাইট © ২০২২. <Link href="/">জমজম গ্রাফিক্স</Link> | সর্বসত্ত্ব সংরক্ষিত
+        কপিরাইট © ২০২২. <Link href="/">জমজম গ্রাফিক্স</Link> | সর্বসত্ত্ব
+        সংরক্ষিত
       </div>
     </>
   );
