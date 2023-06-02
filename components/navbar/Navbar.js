@@ -2,11 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import NavItems from "./NavItems";
 import Drawer from "./Drawer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../public/logo_light.svg";
 
 export default function Navbar() {
   const [show, setShow] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 80);
+    });
+  }, []);
 
   const drawerClick = () => {
     if (!show) {
@@ -16,9 +23,13 @@ export default function Navbar() {
 
   const handleClose = () => setShow("");
 
+  const sticky = scroll
+    ? "shadow md:shadow-md sticky top-0 z-40 bg-base-100"
+    : " ";
+
   return (
     <>
-      <nav className="navbar bg-base-100 shadow md:shadow-md sticky top-0 z-40">
+      <nav className={`navbar ${sticky}`}>
         <div className="container">
           <div className="flex-1">
             <Link href="/" className="navbar-brand">
