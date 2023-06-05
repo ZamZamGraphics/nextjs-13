@@ -1,13 +1,14 @@
 import Link from "next/link";
+import style from "../styles/footer.module.css";
 
 export default function Footer() {
   return (
     <>
-      <footer className="footer p-10 bg-neutral text-neutral-content">
+      <footer className={style.footer}>
         <div className="container">
           <div className="grid grid-cols-12 gap-3">
             <div className="col-span-12 md:col-span-4 mb-3">
-              <h3 className="footer-title">আমাদের সম্পর্কে</h3>
+              <h3 className={style.footerTitle}>আমাদের সম্পর্কে</h3>
               <p>
                 জমজম গ্রাফিক্স ব্রাহ্মণবাড়িয়া শহরে একটি মানসম্মত ডিজাইন এবং
                 প্রিন্টিং হাউজ। দক্ষ ও অভিজ্ঞ ডিজাইনার দ্বারা নিত্য নতুন ডিজাইন
@@ -20,7 +21,7 @@ export default function Footer() {
             <div className="col-span-12 md:col-span-8">
               <div className="grid grid-cols-12 gap-3">
                 <div className="col-span-12 sm:col-span-6 md:col-span-4 mb-3">
-                  <h3 className="footer-title">কুইক লিংক</h3>
+                  <h3 className={style.footerTitle}>কুইক লিংক</h3>
                   <ul>
                     <li>
                       <Link href="/">হোম</Link>
@@ -46,7 +47,7 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="col-span-12 sm:col-span-6 md:col-span-4 mb-3">
-                  <h3 className="footer-title">সেবা সমূহ</h3>
+                  <h3 className={style.footerTitle}>সেবা সমূহ</h3>
                   <ul>
                     <li>
                       <Link href="/services/graphics-design">
@@ -69,7 +70,7 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div className="col-span-12 sm:col-span-6 md:col-span-4 mb-3">
-                  <h3 className="footer-title">যোগাযোগ</h3>
+                  <h3 className={style.footerTitle}>যোগাযোগ</h3>
                   <ul className="break-words">
                     <li>
                       মসজিদ মার্কেট (২য় তলা), মসজিদ রোড, ব্রাহ্মণবাড়িয়া -3400,

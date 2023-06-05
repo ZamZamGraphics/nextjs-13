@@ -60,56 +60,6 @@ h3 {
   font-family: var(--hind-siliguri);
 }
 
-/* offcanvas */
-.offcanvas {
-  @apply fixed bottom-0 flex flex-col max-w-full bg-base-100 bg-clip-padding outline-0 invisible transition-all ease-in-out duration-300;
-  z-index: 1045;
-}
-.offcanvas.offcanvas-start {
-  top: 0;
-  left: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.175);
-  transform: translateX(-100%);
-}
-.offcanvas.offcanvas-end {
-  top: 0;
-  right: 0;
-  border-right: 1px solid rgba(0, 0, 0, 0.175);
-  transform: translateX(100%);
-}
-.offcanvas.hiding,
-.offcanvas.show,
-.offcanvas.showing {
-  @apply visible;
-}
-.offcanvas.show:not(.hiding),
-.offcanvas.showing {
-  @apply transform-none;
-}
-.offcanvas-header {
-  @apply flex items-center justify-between p-4;
-}
-.offcanvas-body {
-  @apply flex-grow p-4 overflow-y-auto;
-}
-
-.offcanvas-backdrop {
-  @apply fixed top-0 left-0 z-50 w-screen h-screen bg-black;
-}
-
-.offcanvas-backdrop.show {
-  opacity: 0.5;
-}
-
-/* footer */
-.footer {
-  font-size: 16px;
-  line-height: 25px;
-}
-.footer-title {
-  font-family: var(--hind-siliguri);
-  font-weight: 600;
-  font-size: 25px;
-  color: white;
-  opacity: 1;
+.heading {
+  @apply text-4xl mt-10 text-center font-bold uppercase text-slate-700 dark:text-slate-300;
 }

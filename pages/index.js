@@ -11,13 +11,9 @@ export default function index({ headers, services }) {
         <title>জমজম গ্রাফিক্স</title>
       </Head>
       <Header headers={headers} />
-      <h2 className="text-4xl mt-10 text-center font-bold uppercase text-slate-700 dark:text-slate-300">
-        আমাদের সেবাসমূহ
-      </h2>
+      <h2 className="heading">আমাদের সেবাসমূহ</h2>
       <Services services={services} />
-      <h2 className="text-4xl mt-10 text-center font-bold uppercase text-slate-700 dark:text-slate-300">
-        আমাদের সম্পর্কে
-      </h2>
+      <h2 className="heading">আমাদের সম্পর্কে</h2>
       <AboutUs />
     </>
   );

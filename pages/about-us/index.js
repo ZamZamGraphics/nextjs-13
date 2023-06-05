@@ -12,9 +12,7 @@ export default function index({ services }) {
       </Head>
       <PageTitle title="আমাদের সম্পর্কে" />
       <AboutUs />
-      <h2 className="text-4xl mt-10 text-center font-bold uppercase text-slate-700 dark:text-slate-300">
-        আমাদের সেবাসমূহ
-      </h2>
+      <h2 className="heading">আমাদের সেবাসমূহ</h2>
       <Services services={services} />
     </>
   );

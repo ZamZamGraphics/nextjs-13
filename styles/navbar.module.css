@@ -1,0 +1,66 @@
+/* navbar, menu, sticky  */
+.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):focus),
+.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):hover) {
+  background-color: transparent;
+}
+.menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active),
+.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
+  color: currentColor;
+  background-color: transparent;
+}
+
+.stickynav {
+  @apply sticky shadow md:shadow-md top-0 z-40 bg-base-100;
+  animation: slideDown 0.35s ease-out;
+  -webkit-animation: slideDown 0.35s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* offcanvas */
+.offcanvas {
+  @apply fixed bottom-0 flex flex-col max-w-full bg-base-100 bg-clip-padding outline-0 invisible transition-all ease-in-out duration-300;
+  z-index: 1045;
+}
+.offcanvas.offcanvasStart {
+  top: 0;
+  left: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.175);
+  transform: translateX(-100%);
+}
+.offcanvas.offcanvasEnd {
+  top: 0;
+  right: 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.175);
+  transform: translateX(100%);
+}
+.offcanvas.hiding,
+.offcanvas.show,
+.offcanvas.showing {
+  @apply visible;
+}
+.offcanvas.show:not(.hiding),
+.offcanvas.showing {
+  @apply transform-none;
+}
+.offcanvasHeader {
+  @apply flex items-center justify-between p-4;
+}
+.offcanvasBody {
+  @apply flex-grow p-4 overflow-y-auto;
+}
+
+.offcanvasBackdrop {
+  @apply fixed top-0 left-0 z-50 w-screen h-screen bg-black transition-opacity duration-150 ease-linear;
+}
+
+.offcanvasBackdrop.show {
+  opacity: 0.5;
+}

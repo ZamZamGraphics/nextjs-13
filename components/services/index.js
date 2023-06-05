@@ -1,10 +1,11 @@
+import style from "../../styles/services.module.css";
 import Service from "./Service";
 
 export default function index({ services }) {
   return (
     <section className="p-10">
       <div className="container">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7">
+        <div className={style.gridcss}>
           {services.map((service) => (
             <Service
               key={Math.random()}

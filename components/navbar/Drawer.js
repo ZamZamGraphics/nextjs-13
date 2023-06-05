@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import NavItems from "./NavItems";
+import style from "../../styles/navbar.module.css";
 
 export default function Drawer({ show, close }) {
   const menuRef = useRef();
@@ -16,8 +17,11 @@ export default function Drawer({ show, close }) {
   });
 
   return (
-    <div ref={menuRef} className={`offcanvas offcanvas-end ${show}`}>
-      <div className="offcanvas-header">
+    <div
+      ref={menuRef}
+      className={`${style.offcanvas} ${style.offcanvasEnd} ${show}`}
+    >
+      <div className={style.offcanvasHeader}>
         <button
           type="button"
           className="btn btn-circle btn-ghost"
@@ -34,7 +38,7 @@ export default function Drawer({ show, close }) {
           </svg>
         </button>
       </div>
-      <div className="offcanvas-body">
+      <div className={style.offcanvasBody}>
         <NavItems classes="menu w-80 bg-base-100" close={close} />
       </div>
     </div>

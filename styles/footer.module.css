@@ -1,0 +1,8 @@
+/* footer */
+.footer {
+  @apply p-10 bg-neutral text-neutral-content text-base;
+}
+.footerTitle {
+  font-family: var(--hind-siliguri);
+  @apply font-semibold text-2xl text-white;
+}

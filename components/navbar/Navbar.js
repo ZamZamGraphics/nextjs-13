@@ -4,6 +4,7 @@ import NavItems from "./NavItems";
 import Drawer from "./Drawer";
 import { useEffect, useState } from "react";
 import logo from "../../public/logo_light.svg";
+import style from "../../styles/navbar.module.css";
 
 export default function Navbar() {
   const [show, setShow] = useState(false);
@@ -17,15 +18,13 @@ export default function Navbar() {
 
   const drawerClick = () => {
     if (!show) {
-      setShow("show");
+      setShow(style.show);
     }
   };
 
   const handleClose = () => setShow("");
 
-  const sticky = scroll
-    ? "shadow md:shadow-md sticky top-0 z-40 bg-base-100"
-    : " ";
+  const sticky = scroll ? style.stickynav : " ";
 
   return (
     <>
@@ -64,13 +63,13 @@ export default function Navbar() {
             </button>
           </div>
           <div className="flex-none hidden lg:block">
-            <NavItems classes="menu menu-horizontal" />
+            <NavItems classes={`menu ${style.menu} menu-horizontal`} />
           </div>
         </div>
       </nav>
       <Drawer show={show} close={handleClose} />
       {show && (
-        <div className="offcanvas-backdrop transition-opacity duration-150 ease-linear show"></div>
+        <div className={`${style.offcanvasBackdrop} ${style.show}`}></div>
       )}
     </>
   );
