@@ -4,8 +4,8 @@ import style from "../../styles/portfolio.module.css";
 
 export default function PortfolioItem({ title, imageUrl, projectUrl }) {
   return (
-    <div className={style.item}>
-      <div className={style.thumbnail}>
+    <div className="mb-7 bg-base-100 text-slate-700 dark:text-slate-300 hover:-translate-y-3 transition-all duration-500 rounded-[18px] shadow-lg">
+      <div className="overflow-hidden cursor-pointer rounded-[18px]">
         <Image
           src={imageUrl}
           alt={title}
@@ -14,16 +14,10 @@ export default function PortfolioItem({ title, imageUrl, projectUrl }) {
           sizes="100vw"
           style={{ width: "100%", height: "auto" }} // optional
         />
-        <div className="project-details">
-          <Link href={projectUrl}>
-            <i className="fa-solid fa-link"></i>
-          </Link>
-          <Link href={`/portfolio/1`}>
-            <i className="fa-solid fa-share"></i>
-          </Link>
-        </div>
       </div>
-      <h3>{title}</h3>
+      <Link href={projectUrl}>
+        <div className="p-4 text-center text-xl">{title}</div>
+      </Link>
     </div>
   );
 }

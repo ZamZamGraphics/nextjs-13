@@ -2,7 +2,6 @@
   @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7;
 }
 .item {
-  @apply mb-7 cursor-pointer bg-green-400 border border-slate-100 shadow-md dark:border-slate-700 rounded-xl;
 }
 .thumbnail {
   @apply transition-all duration-500 hover:scale-105;
