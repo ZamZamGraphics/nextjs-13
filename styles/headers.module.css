@@ -1,11 +1,14 @@
 .css {
-  @apply py-10 relative grid place-items-center lg:min-h-[700px] bg-blue-50 dark:bg-slate-900;
+  @apply py-24 relative grid place-items-center lg:min-h-[800px] bg-emerald-100 dark:bg-slate-900;
 }
 .box {
   @apply grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-28;
 }
 .text {
   @apply flex flex-col justify-center text-center lg:text-left;
+}
+.text h2 {
+  @apply text-green-700 dark:text-green-400;
 }
 .images {
   @apply flex w-full px-10 items-center justify-center;

@@ -64,11 +64,11 @@ export default function Navbar() {
 
   const handleClose = () => setShow("");
 
-  const sticky = scroll ? style.stickynav : " ";
+  const sticky = scroll ? style.stickynav : "absolute";
 
   return (
     <>
-      <nav className={`navbar ${sticky}`}>
+      <nav className={`navbar top-0 z-40 ${sticky}`}>
         <div className="container">
           <div className="flex-1">
             <Link href="/" className="navbar-brand">

@@ -60,6 +60,16 @@ h3 {
   font-family: var(--hind-siliguri);
 }
 
+.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):focus),
+.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):hover) {
+  background-color: transparent;
+}
+.menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active),
+.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
+  color: currentColor;
+  background-color: transparent;
+}
+
 .heading {
-  @apply text-4xl mt-10 text-center font-bold uppercase text-slate-700 dark:text-slate-300;
+  @apply text-4xl mt-10 text-center font-bold uppercase text-green-700 dark:text-green-400;
 }

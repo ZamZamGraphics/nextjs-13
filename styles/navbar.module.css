@@ -1,16 +1,6 @@
 /* navbar, menu, sticky  */
-.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):focus),
-.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):hover) {
-  background-color: transparent;
-}
-.menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active),
-.menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
-  color: currentColor;
-  background-color: transparent;
-}
-
 .stickynav {
-  @apply sticky shadow md:shadow-md top-0 z-40 bg-base-100;
+  @apply sticky shadow md:shadow-md bg-base-100;
   animation: slideDown 0.35s ease-out;
   -webkit-animation: slideDown 0.35s ease-out;
 }

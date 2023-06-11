@@ -15,7 +15,7 @@ export default function PortfolioItem({ title, imageUrl, projectUrl }) {
           style={{ width: "100%", height: "auto" }} // optional
         />
       </div>
-      <Link href={projectUrl}>
+      <Link href={projectUrl} target="_blank">
         <div className="p-4 text-center text-xl">{title}</div>
       </Link>
     </div>

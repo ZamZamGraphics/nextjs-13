@@ -35,6 +35,8 @@ app.get("/", (req, res) => {
 });
 
 const PORT = process.env.PORT || 4000;
+const DATABASE_URL =
+  process.env.MONGO_CONNECTION_STRING || "mongodb://localhost/zamzam";
 
 // 404 not found handler
 app.use((req, res, next) => {
@@ -53,7 +55,7 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`SERVER is RUNNING ON PORT ${PORT}`);
   mongoose
-    .connect(process.env.MONGO_CONNECTION_STRING)
+    .connect(DATABASE_URL)
     .then(() => console.log("database connection successful!"))
     .catch((err) => console.log(err));
 });

@@ -3,8 +3,9 @@ import axios from "../lib/axios";
 import Header from "@/components/Header";
 import Services from "@/components/services";
 import AboutUs from "@/components/AboutUs";
+import Portfolio from "../components/portfolio";
 
-export default function index({ headers, services }) {
+export default function index({ headers, services, portfolio }) {
   return (
     <>
       <Head>
@@ -15,6 +16,10 @@ export default function index({ headers, services }) {
       <Services services={services} />
       <h2 className="heading">আমাদের সম্পর্কে</h2>
       <AboutUs />
+      <div className="bg-emerald-50 dark:bg-slate-800">
+        <h2 className="heading pt-10">পোর্টফোলিও</h2>
+      </div>
+      <Portfolio portfolio={portfolio} />
     </>
   );
 }
@@ -22,8 +27,10 @@ export default function index({ headers, services }) {
 export async function getServerSideProps() {
   const headerResponse = await axios("header");
   const serviceResponse = await axios("services");
+  const portfolioResponse = await axios("portfolio");
 
   const headers = await headerResponse.data;
   const services = await serviceResponse.data;
-  return { props: { headers, services } };
+  const portfolio = await portfolioResponse.data;
+  return { props: { headers, services, portfolio } };
 }

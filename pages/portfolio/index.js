@@ -1,7 +1,7 @@
 import axios from "../../lib/axios";
 import Head from "next/head";
 import PageTitle from "@/components/PageTitle";
-import Portfolio from "../../components/portfolio";
+import Portfolio from "@/components/portfolio";
 
 export default function index({ portfolio }) {
   return (
