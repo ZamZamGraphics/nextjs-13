@@ -1,5 +1,5 @@
 .css {
-  @apply py-24 relative grid place-items-center lg:min-h-[800px] bg-emerald-100 dark:bg-slate-900;
+  @apply py-24 relative grid place-items-center lg:min-h-screen bg-emerald-100 dark:bg-slate-900;
 }
 .box {
   @apply grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-28;

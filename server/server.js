@@ -55,7 +55,11 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`SERVER is RUNNING ON PORT ${PORT}`);
   mongoose
-    .connect(DATABASE_URL)
+    .connect(DATABASE_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      family: 4,
+    })
     .then(() => console.log("database connection successful!"))
     .catch((err) => console.log(err));
 });
